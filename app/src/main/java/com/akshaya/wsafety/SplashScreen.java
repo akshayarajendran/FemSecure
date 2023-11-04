@@ -1,4 +1,4 @@
-package com.vinayak09.wsafety;
+package com.akshaya.wsafety;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +21,7 @@ public class SplashScreen extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                startActivity(new Intent(SplashScreen.this,MainActivity.class));
+                startActivity(new Intent(SplashScreen.this, MainActivity.class));
                 SplashScreen.this.finish();
             }
         }.start();

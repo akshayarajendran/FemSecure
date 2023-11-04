@@ -1,4 +1,4 @@
-package com.vinayak09.wsafety;
+package com.akshaya.wsafety;
 
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -23,7 +23,6 @@ import android.widget.TextView;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.Map;
-import java.util.function.BiConsumer;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
         String ENUM = sharedPreferences.getString("ENUM","NONE");
         if(ENUM.equalsIgnoreCase("NONE")){
-            startActivity(new Intent(this,RegisterNumberActivity.class));
+            startActivity(new Intent(this, RegisterNumberActivity.class));
         }else {
             TextView textView =  findViewById(R.id.textNum);
             textView.setText("SOS Will Be Sent To\n"+ENUM);
@@ -92,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void stopService(View view) {
 
-        Intent notificationIntent = new Intent(this,ServiceMine.class);
+        Intent notificationIntent = new Intent(this, ServiceMine.class);
         notificationIntent.setAction("stop");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             getApplicationContext().startForegroundService(notificationIntent);

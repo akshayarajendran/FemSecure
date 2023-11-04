@@ -1,4 +1,4 @@
-package com.vinayak09.wsafety;
+package com.akshaya.wsafety;
 
 import android.Manifest;
 import android.app.Notification;
@@ -20,6 +20,7 @@ import com.github.tbouron.shakedetector.library.ShakeDetector;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
+
 public class ServiceMine extends Service {
 
     boolean isRunning = false;
@@ -108,7 +109,7 @@ public class ServiceMine extends Service {
                     Notification notification = new Notification.Builder(this, "MYID")
                             .setContentTitle("Women Safety")
                             .setContentText("Shake Device to Send SOS")
-                            .setSmallIcon(R.drawable.girl_vector)
+                            .setSmallIcon(R.drawable.splashscreen)
                             .setContentIntent(pendingIntent)
                             .build();
                     this.startForeground(115, notification);
